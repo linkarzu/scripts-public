@@ -5,10 +5,11 @@ boldYellow="\033[1;33m"
 boldRed="\033[1;31m"
 noColor="\033[0m"
 
-# printf "\n\n\n"
-# printf "\n\n${boldGreen}>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n${noColor}"
-# printf "${boldGreen}>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n${noColor}"
-printf "\nThis script will\n"
+# >>>>>>>>>>>>>Beginning<<<<<<<<<<<<
+printf "\n\n\n"
+printf "\n\n${boldGreen}>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n${noColor}"
+printf "${boldGreen}>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n${noColor}"
+printf "This script will\n"
 printf "1. Only install docker if not installed yet\n"
 printf "2. Check you have sudo permissions\n"
 printf "3. Ask you for the version you want to install\n"
@@ -23,9 +24,10 @@ fi
 
 # Check if the user has sudo permissions
 if ! sudo -n true 2>/dev/null; then
-  printf "${boldYellow}User $USER does not have sudo permissions.${noColor}\n"
-  printf "${boldYellow}Fix that and try again${noColor}\n"
-  exit 0
+	printf "${boldYellow}User $USER does not have sudo permissions.${noColor}\n"
+	printf "${boldYellow}Fix that and try again${noColor}\n"
+	exit 0
+fi
 
 outroMessage() {
 	installedVersion=$(docker --version | cut -d ' ' -f 3 | tr -d ',')
@@ -35,8 +37,8 @@ outroMessage() {
 }
 
 adduserToGroup() {
-  # Create the docker group if it doesn't exists, if it does, nothing happens
-  sudo groupadd docker 2>/dev/null
+	# Create the docker group if it doesn't exists, if it does, nothing happens
+	sudo groupadd docker 2>/dev/null
 
 	# Add current user to the docker group
 	sudo usermod -aG docker $USER
@@ -67,7 +69,6 @@ downloadScript() {
 	# Download script
 	curl -fsSL https://get.docker.com -o ~/install-docker.sh 2>&1 >/dev/null
 }
-
 
 printf "${boldGreen}Specify the docker version you want to install\n${noColor}"
 printf "${boldGreen}- You can check this in other servers with 'docker --version'\n${noColor}"
@@ -105,4 +106,3 @@ else
 		exit 1
 	fi
 fi
-
