@@ -28,7 +28,7 @@ fi
 outroMessage() {
 	installedVersion=$(docker --version | cut -d ' ' -f 3 | tr -d ',')
 	printf "\n\n${boldGreen}>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n${noColor}"
-	printf "${boldGreen}docker $installedVersion installed and user $USER added to docker group\n${noColor}"
+	printf "\n${boldGreen}docker $installedVersion installed and user $USER added to docker group\n${noColor}"
 	printf "${boldYellow}Exit the shell and then run 'docker ps' to confirm\n${noColor}"
 }
 
@@ -37,7 +37,7 @@ adduserToGroup() {
 	sudo groupadd docker 2>/dev/null
 
 	# Add current user to the docker group
-	sudo usermod -aG docker $USER
+	sudo usermod -aG docker $USER 2>/dev/null
 
 	# Verify that your user is part of the docker group
 	if groups $USER | grep 'docker'; then
