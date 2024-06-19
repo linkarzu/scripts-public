@@ -73,7 +73,7 @@ printf "${boldGreen}- Find releases in 'https://docs.docker.com/engine/release-n
 printf "${boldGreen}- Which comes from 'https://github.com/moby/moby/tags'\n${noColor}"
 
 printf "\n${boldYellow}Displaying list of latest 15 versions\n${noColor}"
-curl -s https://api.github.com/repos/moby/moby/tags | grep '"name"' | cut -d'"' -f4 | grep -E '^v' | grep -vE 'rc|beta' | tail -n 15
+curl -s https://api.github.com/repos/moby/moby/tags | grep '"name"' | cut -d'"' -f4 | grep -E '^v' | grep -vE 'rc|beta' | head -n 15
 
 printf "\n${boldYellow}Leave blank if you want to install the latest version\n${noColor}"
 read -p "Enter the Docker version to install (default -> latest): " userInput
