@@ -20,8 +20,9 @@ fi
 
 # Check if the user has sudo permissions
 if ! sudo -n true 2>/dev/null; then
-	printf "${boldYellow}User $USER does not have sudo permissions.${noColor}\n"
-	printf "${boldYellow}Fix that and try again${noColor}\n"
+	printf "${boldYellow}User $USER does not have sudo access${noColor}\n"
+	printf "${boldYellow}It's recommended you configure it so you don't be typing your root pwd${noColor}\n"
+	printf "${boldYellow}See the 'Configure sudo access' section${noColor}\n"
 	exit 0
 fi
 
@@ -61,6 +62,9 @@ downloadScript() {
 	# Update package lists
 	sudo apt-get update -y 2>&1 >/dev/null
 	printf "\nUpdated package lists\n"
+
+	# Install curl in case it's not installed
+	sudo apt-get install curl -y 2>&1 >/dev/null
 
 	# Download script
 	curl -fsSL https://get.docker.com -o ~/install-docker.sh 2>&1 >/dev/null
