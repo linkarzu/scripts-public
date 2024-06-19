@@ -75,8 +75,8 @@ printf "${boldGreen}- Which comes from 'https://github.com/moby/moby/tags'\n${no
 printf "\n${boldYellow}Displaying list of latest 15 versions\n${noColor}"
 curl -s https://api.github.com/repos/moby/moby/tags | grep '"name"' | cut -d'"' -f4 | grep -E '^v' | grep -vE 'rc|beta' | tail -n 15
 
-printf "\n${boldYellow}Leave blank if you want to install the latest version\n\n${noColor}"
-read -p "Enter the Docker version to install (default: latest): " userInput
+printf "\n${boldYellow}Leave blank if you want to install the latest version\n${noColor}"
+read -p "Enter the Docker version to install (default -> latest): " userInput
 
 printf "\n${boldYellow}Executing the downloaded script${noColor}\n"
 if [ -z "$userInput" ]; then
