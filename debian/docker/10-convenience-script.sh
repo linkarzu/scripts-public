@@ -59,7 +59,7 @@ adduserToGroup() {
 
 downloadScript() {
 	# Update package lists
-	sudo apt-get update -y 2>&1 >/dev/nul
+	sudo apt-get update -y 2>&1 >/dev/null
 	printf "\nUpdated package lists\n"
 
 	# Download script
