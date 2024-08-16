@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Filename: ~/github/scripts/macos/mac/310-bannerOn.sh
-# ~/github/scripts/macos/mac/310-bannerOn.sh
+# Filename: ~/github/scripts-public/macos/mac/305-bannerOn.sh
+# ~/github/scripts-public/macos/mac/305-bannerOn.sh
 
 # Function to show the banner
 show_banner() {

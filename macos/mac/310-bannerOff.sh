@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Filename: ~/github/scripts/macos/mac/310-bannerOff.sh
-# ~/github/scripts/macos/mac/310-bannerOff.sh
+# Filename: ~/github/scripts-public/macos/mac/310-bannerOff.sh
+# ~/github/scripts-public/macos/mac/310-bannerOff.sh
 
 rm ~/github/dotfiles-latest/youtube-banner.txt
 
