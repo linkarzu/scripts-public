@@ -16,7 +16,7 @@
 
 ## Youtube - how to install windows 11 over the network
 
-<div align="center">
+<div align="left">
     <a href="https://youtu.be/25uqeRAG39A">
         <img
           src="https://res.cloudinary.com/daqwsgmx6/image/upload/q_75/v1708093565/youtube/docker-practical/win11-netbootxyz.avif"

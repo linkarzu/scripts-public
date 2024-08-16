@@ -8,7 +8,7 @@
 
 ## Youtube - Install docker with a single command using the convenience script
 
-<div align="center">
+<div align="left">
     <a href="https://youtu.be/HwEg6OYQzWY">
         <img
           src="https://res.cloudinary.com/daqwsgmx6/image/upload/q_75/v1718827702/youtube/docker-practical/convenience-script.avif"
