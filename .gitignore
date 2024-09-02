@@ -1,1 +1,2 @@
-server exited unexpectedly
+*.DS_Store
+*server exited unexpectedly
